@@ -78,6 +78,18 @@ public interface TrayIndicatorsConfig extends Config
 	{
 		return Color.decode("#ffffff");
 	}
+
+  @ConfigItem(
+    keyName = "healthTxtSize",
+    name = "Text Size",
+    description = "",
+    section = healthSection,
+    position = 3
+  )
+  default int healthTxtSize()
+  {
+    return 12;
+  }
 	//endregion
 
 	//region Prayer Options
@@ -123,6 +135,19 @@ public interface TrayIndicatorsConfig extends Config
 	{
 		return Color.decode("#000000");
 	}
+
+	@ConfigItem(
+		keyName = "prayerTxtSize",
+		name = "Text Size",
+		description = "",
+		section = prayerSection,
+		position = 3
+	)
+	default int prayerTxtSize()
+	{
+		return 12;
+	}
+
 	//endregion
 
 	//region Absorption Options
@@ -169,6 +194,19 @@ public interface TrayIndicatorsConfig extends Config
 	default Color absorptionTxtColor()
 	{
 		return Color.decode("#000000");
+	}
+
+	@ConfigItem(
+		keyName = "absorptionTxtSize",
+		name = "Text Size",
+		description = "",
+		section = absorptionSection,
+		position = 3
+	)
+
+	default int absorptionTxtSize()
+	{
+		return 12;
 	}
 	//endregion
 
@@ -229,6 +267,19 @@ public interface TrayIndicatorsConfig extends Config
 	default boolean cannonTxtDynamic()
 	{
 		return false;
+	}
+
+	@ConfigItem(
+		keyName = "cannonTxtSize",
+		name = "Text Size",
+		description = "",
+		section = cannonSection,
+		position = 4
+	)
+
+	default int cannonTxtSize()
+	{
+		return 12;
 	}
 	//endregion
 
@@ -331,6 +382,19 @@ public interface TrayIndicatorsConfig extends Config
 	{
 		return Color.decode("#ff0000");
 	}
+
+	@ConfigItem(
+		keyName = "inventoryTxtSize",
+		name = "Inventory Text Size",
+		description = "",
+		section = inventorySection,
+		position = 7
+	)
+
+	default int inventoryTxtSize()
+	{
+		return 12;
+	}
 	//endregion
 
 	//region Special Attack Options
@@ -405,6 +469,19 @@ public interface TrayIndicatorsConfig extends Config
 	default Color specProgressColor()
 	{
 		return Color.decode("#4398ae");
+	}
+
+	@ConfigItem(
+		keyName = "specTxtSize",
+		name = "Special Attack Text Size",
+		description = "",
+		section = specSection,
+		position = 5
+	)
+
+	default int specTxtSize()
+	{
+		return 12;
 	}
 	//endregion
 }

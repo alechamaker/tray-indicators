@@ -55,14 +55,14 @@ public abstract class Icon
 		this.config = config;
 	}
 
-	private void createIcon(int value, Color bgColor, Color txtColor)
+	private void createIcon(int value, Color bgColor, Color txtColor, int txtSize)
 	{
 		if (trayIcon != null)
 		{
 			removeIcon();
 		}
 
-		trayIcon = new TrayIcon(createImage(value, bgColor, txtColor));
+		trayIcon = new TrayIcon(createImage(value, bgColor, txtColor, txtSize));
 		trayIcon.setImageAutoSize(true);
 
 		try
@@ -116,12 +116,12 @@ public abstract class Icon
 
 		if (trayIcon == null)
 		{
-			createIcon(data.value, data.bgColor, data.txtColor);
+			createIcon(data.value, data.bgColor, data.txtColor, data.txtSize);
 		}
 		else
 		{
 			trayIcon.getImage().flush();
-			trayIcon.setImage(createImage(data.value, data.bgColor, data.txtColor));
+			trayIcon.setImage(createImage(data.value, data.bgColor, data.txtColor, data.txtSize));
 		}
 
 		if (cacheImage)
@@ -141,7 +141,7 @@ public abstract class Icon
 		trayIcon = null;
 	}
 
-	protected BufferedImage createImage(int value, Color bgColor, Color txtColor)
+	protected BufferedImage createImage(int value, Color bgColor, Color txtColor, int txtSize)
 	{
 		int size = 16;
 		String text = Integer.toString(value);
@@ -156,8 +156,7 @@ public abstract class Icon
 		// Draw text
 		graphics.setColor(txtColor);
 
-		int fontSize = (text.length() >= 4) ? 8 : (text.length() == 3) ? 9 : 12;
-		graphics.setFont(new Font(graphics.getFont().getName(), Font.PLAIN, fontSize));
+		graphics.setFont(new Font(graphics.getFont().getName(), Font.PLAIN, txtSize));
 
 		FontMetrics metrics = graphics.getFontMetrics();
 		int x = (size - metrics.stringWidth(text)) / 2;

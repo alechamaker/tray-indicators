@@ -60,7 +60,8 @@ public class InventoryIcon extends Icon
 		return new IconData(
 			filledSlots,
 			config.inventoryColor(),
-			txtColor
+			txtColor,
+      config.inventoryTxtSize()
 		);
 	}
 

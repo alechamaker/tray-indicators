@@ -11,4 +11,5 @@ public class IconData
 	public int value;
 	public Color bgColor;
 	public Color txtColor;
+  public int txtSize;
 }

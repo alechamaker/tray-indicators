@@ -58,7 +58,8 @@ public class SpecIcon extends Icon
 		return new IconData(
 			client.getVarpValue(VarPlayer.SPECIAL_ATTACK_PERCENT) / 10,
 			config.specColor(),
-			config.specTxtColor()
+			config.specTxtColor(),
+      config.specTxtSize()
 		);
 	}
 
@@ -112,11 +113,11 @@ public class SpecIcon extends Icon
 	}
 
 	@Override
-	protected BufferedImage createImage(int value, Color bgColor, Color txtColor) {
+	protected BufferedImage createImage(int value, Color bgColor, Color txtColor, int txtSize) {
 		// Use the default image creation if we don't have to draw the progress bar.
 		if (!config.specProgress())
 		{
-			return super.createImage(value, bgColor, txtColor);
+			return super.createImage(value, bgColor, txtColor, txtSize);
 		}
 
 		final int ticksPerSpecRegen = wearingLightbearer ? LIGHTBEARER_REGEN_TICKS : SPEC_REGEN_TICKS;
@@ -142,8 +143,7 @@ public class SpecIcon extends Icon
 		// Draw text
 		graphics.setColor(txtColor);
 
-		int fontSize = (text.length() >= 4) ? 8 : (text.length() == 3) ? 9 : 12;
-		graphics.setFont(new Font(graphics.getFont().getName(), Font.PLAIN, fontSize));
+		graphics.setFont(new Font(graphics.getFont().getName(), Font.PLAIN, txtSize));
 
 		FontMetrics metrics = graphics.getFontMetrics();
 		int x = (size - metrics.stringWidth(text)) / 2;
