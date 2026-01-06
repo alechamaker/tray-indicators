@@ -59,7 +59,9 @@ public class SpecIcon extends Icon
 			client.getVarpValue(VarPlayer.SPECIAL_ATTACK_PERCENT) / 10,
 			config.specColor(),
 			config.specTxtColor(),
-      config.specTxtSize()
+      config.specTxtSize(),
+      config.specXOffset(),
+      config.specYOffset()
 		);
 	}
 
@@ -113,11 +115,11 @@ public class SpecIcon extends Icon
 	}
 
 	@Override
-	protected BufferedImage createImage(int value, Color bgColor, Color txtColor, int txtSize) {
+	protected BufferedImage createImage(int value, Color bgColor, Color txtColor, int txtSize, int xOffset, int yOffset) {
 		// Use the default image creation if we don't have to draw the progress bar.
 		if (!config.specProgress())
 		{
-			return super.createImage(value, bgColor, txtColor, txtSize);
+			return super.createImage(value, bgColor, txtColor, txtSize, xOffset, yOffset);
 		}
 
 		final int ticksPerSpecRegen = wearingLightbearer ? LIGHTBEARER_REGEN_TICKS : SPEC_REGEN_TICKS;

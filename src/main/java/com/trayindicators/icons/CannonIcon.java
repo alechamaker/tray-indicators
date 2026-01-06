@@ -71,7 +71,9 @@ public class CannonIcon extends Icon
 			value,
 			config.cannonColor(),
 			txtColor,
-      config.cannonTxtSize()
+      config.cannonTxtSize(),
+      config.cannonXOffset(),
+      config.cannonYOffset()
 		);
 	}
 

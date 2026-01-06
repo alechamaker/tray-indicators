@@ -90,6 +90,30 @@ public interface TrayIndicatorsConfig extends Config
   {
     return 12;
   }
+
+  @ConfigItem(
+    keyName = "healthXOffset",
+    name = "Text X Offset",
+    description = "",
+    section = healthSection,
+    position = 4
+  )
+  default int healthXOffset()
+  {
+    return 0;
+  }
+
+  @ConfigItem(
+    keyName = "healthYOffset",
+    name = "Text Y Offset",
+    description = "",
+    section = healthSection,
+    position = 5
+  )
+  default int healthYOffset()
+  {
+    return 0;
+  }
 	//endregion
 
 	//region Prayer Options
@@ -147,6 +171,31 @@ public interface TrayIndicatorsConfig extends Config
 	{
 		return 12;
 	}
+
+  @ConfigItem(
+    keyName = "prayerXOffset",
+    name = "Text X Offset",
+    description = "",
+    section = prayerSection,
+    position = 4
+  )
+  default int prayerXOffset()
+  {
+    return 0;
+  }
+
+  @ConfigItem(
+    keyName = "prayerYOffset",
+    name = "Text Y Offset",
+    description = "",
+    section = prayerSection,
+    position = 5
+  )
+  default int prayerYOffset()
+  {
+    return 0;
+  }
+
 
 	//endregion
 
@@ -208,6 +257,30 @@ public interface TrayIndicatorsConfig extends Config
 	{
 		return 12;
 	}
+
+  @ConfigItem(
+    keyName = "absorptionXOffset",
+    name = "Text X Offset",
+    description = "",
+    section = absorptionSection,
+    position = 4
+  )
+  default int absorptionXOffset()
+  {
+    return 0;
+  }
+
+  @ConfigItem(
+    keyName = "absorptionYOffset",
+    name = "Text Y Offset",
+    description = "",
+    section = absorptionSection,
+    position = 5
+  )
+  default int absorptionYOffset()
+  {
+    return 0;
+  }
 	//endregion
 
 	//region Cannonballs Options
@@ -281,6 +354,31 @@ public interface TrayIndicatorsConfig extends Config
 	{
 		return 12;
 	}
+
+  @ConfigItem(
+      keyName = "cannonXOffset",
+      name = "Text X Offset",
+      description = "",
+      section = cannonSection,
+      position = 5
+    )
+    default int cannonXOffset()
+    {
+      return 0;
+    }
+
+  @ConfigItem(
+      keyName = "cannonYOffset",
+      name = "Text Y Offset",
+      description = "",
+      section = cannonSection,
+      position = 6
+    )
+    default int cannonYOffset()
+    {
+      return 0;
+    }
+
 	//endregion
 
 	//region Inventory Options
@@ -394,7 +492,31 @@ public interface TrayIndicatorsConfig extends Config
 	default int inventoryTxtSize()
 	{
 		return 12;
-	}
+	} 
+
+  @ConfigItem(
+      keyName = "inventoryXOffset",
+      name = "Text X Offset",
+      description = "",
+      section = cannonSection,
+      position = 8
+  )
+  default int inventoryXOffset()
+  {
+    return 0;
+  }
+
+  @ConfigItem(
+      keyName = "inventoryYOffset",
+      name = "Text Y Offset",
+      description = "",
+      section = cannonSection,
+      position = 9
+  )
+  default int inventoryYOffset()
+  {
+    return 0;
+  }
 	//endregion
 
 	//region Special Attack Options
@@ -483,5 +605,29 @@ public interface TrayIndicatorsConfig extends Config
 	{
 		return 12;
 	}
+
+  @ConfigItem(
+      keyName = "specXOffset",
+      name = "Text X Offset",
+      description = "",
+      section = specSection,
+      position = 6
+  )
+  default int specXOffset()
+  {
+    return 0;
+  }
+
+  @ConfigItem(
+      keyName = "specYOffset",
+      name = "Text Y Offset",
+      description = "",
+      section = specSection,
+      position = 7
+  )
+  default int specYOffset()
+  {
+    return 0;
+  }
 	//endregion
 }

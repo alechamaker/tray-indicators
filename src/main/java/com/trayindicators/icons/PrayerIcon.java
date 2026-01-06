@@ -42,7 +42,9 @@ public class PrayerIcon extends Icon
 			client.getBoostedSkillLevel(Skill.PRAYER),
 			config.prayerColor(),
 			config.prayerTxtColor(),
-      config.prayerTxtSize()
+      config.prayerTxtSize(),
+      config.prayerXOffset(),
+      config.prayerYOffset()
 		);
 	}
 

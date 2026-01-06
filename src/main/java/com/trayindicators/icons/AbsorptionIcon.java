@@ -45,7 +45,9 @@ public class AbsorptionIcon extends Icon
 			client.getVarbitValue(Varbits.NMZ_ABSORPTION),
 			config.absorptionColor(),
 			config.absorptionTxtColor(),
-      config.absorptionTxtSize()
+      config.absorptionTxtSize(),
+      config.absorptionXOffset(),
+      config.absorptionYOffset()
 		);
 	}
 
